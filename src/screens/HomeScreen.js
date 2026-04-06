@@ -13,7 +13,7 @@ export default function HomeScreen({ navigation }) {
       {/* Header: Logo + Nombre */}
       <View style={styles.header}>
         <Image source={require("../../assets/logo.png")} style={styles.logo} />
-        <Text style={styles.brandName}>Pixel & Forge</Text>
+        <Text style={styles.brandName}>Forge & Pixel</Text>
         <Text style={styles.brandTagline}>Arte digital & Diseño de personajes</Text>
       </View>
 
@@ -87,6 +87,15 @@ export default function HomeScreen({ navigation }) {
       >
         <Text style={styles.buttonText}>Ver catálogo completo</Text>
         <Text style={styles.buttonArrow}>→</Text>
+      </TouchableOpacity>
+
+      {/* Botón ir al carrito (reto clase 5) */}
+      <TouchableOpacity
+        style={styles.cartButton}
+        onPress={() => navigation.navigate("Cart")}
+        activeOpacity={0.85}
+      >
+        <Text style={styles.buttonText}>Ver carrito 🛒</Text>
       </TouchableOpacity>
 
       <View style={styles.bottomSpacing} />
@@ -289,6 +298,20 @@ const styles = StyleSheet.create({
     color: COLORS.white,
     fontSize: 18,
     fontWeight: "800",
+  },
+
+  cartButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: COLORS.surface,
+    marginHorizontal: 16,
+    marginTop: 12,
+    paddingVertical: 16,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: COLORS.cyan,
+    elevation: 3,
   },
 
   bottomSpacing: {

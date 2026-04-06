@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "NombreEcommerce",
-    "slug": "NombreEcommerce",
+    "name": "Forge & Pixel",
+    "slug": "forge-y-pixel",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/logo.png",
@@ -25,6 +25,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "08de1afc-99ea-4f4d-8037-19eae89bd9c6"
+      }
     }
   }
 }

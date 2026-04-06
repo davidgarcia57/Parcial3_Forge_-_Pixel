@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 
 const COLORS = {
   card: "#22223A",
@@ -7,9 +7,9 @@ const COLORS = {
   border: "#2E2E4A",
 };
 
-export default function ProductCard({ name, price, image }) {
+export default function ProductCard({ name, price, image, onPress }) {
   return (
-    <View style={styles.card}>
+    <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.85}>
       <Image
         source={typeof image === "string" ? { uri: image } : image}
         style={styles.image}
@@ -19,7 +19,7 @@ export default function ProductCard({ name, price, image }) {
         <Text style={styles.productName}>{name}</Text>
         <Text style={styles.productPrice}>${price}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
